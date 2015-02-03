@@ -1,0 +1,11 @@
+body {
+    background-color: #6CA6CD;
+}
+#header {
+    overflow: hidden;
+    height: 50px;
+}
+#primary_right {
+    margin-top: 5px;
+    float: right;
+}
