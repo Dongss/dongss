@@ -1,6 +1,6 @@
 body {
     background-color: #f5f5f5/*6CA6CD*/;
-    overflow-x: hidden;
+    overflow-x: inherit;
 }
 a {
     color: #777;
@@ -8,6 +8,7 @@ a {
 #header {
     overflow: hidden;
     height: 50px;
+    min-width: 1100px;
 }
 #header_right {
     margin-top: 5px;
@@ -18,4 +19,10 @@ a {
     margin-left: auto;
     margin-right: auto;
     min-height: 600px;
+}
+#menu_btn {
+    text-align: right;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
