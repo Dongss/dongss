@@ -1,9 +1,13 @@
 body {
-    background-color: #196A79;
+    background-color: #373737;
     overflow-x: inherit;
 }
 a {
     color: #777;
+}
+a:hover {
+    color: #BA9F58;
+    text-decoration: none;
 }
 #header {
     overflow: hidden;
@@ -23,6 +27,14 @@ a {
 .box-1 {
     width: 230px;
     min-height: 500px;
+    float: left;
+}
+.box-3 {
+    min-height: 500px;
+    margin-left: 20px;
+    width: 814px;
+    display: inline-block;
+
 }
 #menu_btn {
     text-align: right;
@@ -33,4 +45,13 @@ a {
 }
 #menu_btn i {
     margin-right: 10px;
+}
+#category a {
+    font-size: larger;
+    color: #389AAB;
+}
+.panel-default>.panel-heading {
+    color: #F5F2F2;
+    background-color: #3F5256;
+    font-weight: 900;
 }

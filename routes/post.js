@@ -17,12 +17,12 @@ router.get('/post/category/:category', function(req, res, next) {
 });
 
 /* GET a post by post_name. */
-router.get('/post/:post_name', function(req, res, next) {
+router.get('/post/:category/:post_name', function(req, res, next) {
     Post.get_post(req, res)
 });
 
-//res detail of a post
-router.get('/get/post/:post_name', function(req, res, next) {
+//#res detail of a post
+router.get('/get/post/:category/:post_name', function(req, res, next) {
     Post.get_post_detail(req, res);
 });
 //#res category and num

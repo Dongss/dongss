@@ -1,6 +1,7 @@
 var Fs = require('fs');
 var Types =require('../config/category.json');
 var APIs = require('../config/api.json');
+var Markdown = require('markdown').markdown;
 
 module.exports.get_all = function() {
     var results = [];
@@ -44,10 +45,10 @@ module.exports.get_by_category = function(category) {
 }
 
 module.exports.get_post_detail = function(category, post_name, callback) {
-    Fs.readFile('../config/posts/' + category + post_name + '.md', function(err, data) {
+    Fs.readFile('../config/posts/' + category + '/' + post_name + '.md', function(err, data) {
         if(err) {
             return callback(true);
         }
-        return callback(null, data)
+        return callback(null, (Markdown.toHTML(data.toString('utf-8'))))
     });
 }

@@ -17,13 +17,11 @@ module.exports.get_by_category = function(req, res) {
 }
 
 module.exports.get_post_detail = function(req, res) {
-    Post.get_post_detail('node-stuff', '1', function(err, data) {
+    Post.get_post_detail('nodejs-stuff', '1', function(err, data) {
         if(err) {
             res.end();
-        } else {
-            res.json({
-                data: data
-            });
+        } else{
+            res.send(data);
         }
     });
 }
