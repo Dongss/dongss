@@ -20,7 +20,6 @@ module.exports.get_all_by_catepory = function() {
     }
 
     for(var i in APIs) {
-        //console.log(APIs[i]['category']);
         results[APIs[i]['category']].push(APIs[i]);
     }
     return results;

@@ -3,7 +3,8 @@ requirejs.config({
     paths: {
         'jquery': 'libs/jquery',
         'category': 'src/category',
-        'list': 'src/list'
+        'list': 'src/list',
+        'detail': 'src/detail'
     },
     shim: {
         "category": {
@@ -19,4 +20,8 @@ require(['category'], function (category) {
 
 require(['list'], function (list) {
     list.list();
+});
+
+require(['detail'], function(detail) {
+    detail.detail('1');
 });

@@ -3,6 +3,8 @@ define(['jquery'], function($) {
         $.ajax({
             url: '/get/post',
             success: function(data) {
+                $('#list').empty();
+
                 for(var i in data.data) {
                     var html = '<a href="#">' + data.data[i].title + '</a></br>';
                     $('#list').after(html);

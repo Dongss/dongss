@@ -11,27 +11,27 @@
     "category": "javascript",
     "title": "2222222",
     "tags": "t2t2",
-    "time": "20110123"
+    "time": "2011-01-23 00:00:00"
   },
   "3": {
     "name": "3",
     "category": "other",
     "title": "333333",
     "tags": "t2t2",
-    "time": "20110123"
+    "time": "2011-01-23 00:00:00"
   },
   "4": {
     "name": "4",
     "category": "web",
     "title": "4444",
     "tags": "t2t2",
-    "time": "20110123"
+    "time": "2011-01-23 00:00:00"
   },
   "5": {
     "name": "5",
     "category": "nodejs-stuff",
     "title": "66666",
     "tags": "t2t2",
-    "time": "20110123"
+    "time": "2011-01-23 00:00:00"
   }
 }
