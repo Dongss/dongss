@@ -1,4 +1,5 @@
 var Post = require('../models/post');
+var Request = require('request');
 
 module.exports.demo = function(req, res) {
     res.json({
@@ -11,8 +12,16 @@ module.exports.home = function(req, res) {
 }
 
 module.exports.get_by_category = function(req, res) {
-    res.json({
-        data: "get_by_category"
+    Request({
+        method: 'get',
+        url: 'http://localhost:3000/get/post/' + req.params.category
+    }, function(err, resonse, data) {
+        if(err) {
+            console.log(err);
+            res.end();;
+            return;
+        }
+        res.render('layout/index');
     });
 }
 
@@ -36,6 +45,6 @@ module.exports.get_all_by_category = function(req, res) {
 module.exports.get_post_all = function(req, res) {
     //category || "all"
     res.json({
-        data: Post.get_by_category("all")
+        data: Post.get_by_category(req.params.category)
     });
 }

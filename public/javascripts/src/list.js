@@ -1,7 +1,7 @@
 define(['jquery'], function($) {
     var list = function() {
         $.ajax({
-            url: '/get/post',
+            url: '/get/post' + '/all',
             success: function(data) {
                 $('#list').empty();
 

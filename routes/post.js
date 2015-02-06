@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET by category. */
-router.get('/post/category/:category', function(req, res, next) {
+router.get('/category/:category', function(req, res, next) {
         Post.get_by_category(req, res);
 });
 
@@ -30,7 +30,7 @@ router.get('/get/category', function(req, res, next) {
     Post.get_all_by_category(req, res);
 });
 //#res all posts by category || all
-router.get('/get/post/?category', function(req, res, next) {
+router.get('/get/post/:category', function(req, res, next) {
     Post.get_post_all(req, res);
 });
 
