@@ -1,32 +1,40 @@
 var Post = require('../models/post');
 var Request = require('request');
 
-module.exports.demo = function(req, res) {
-    res.json({
-        data: Post.get_all()
-    });
-}
-
 module.exports.home = function(req, res) {
-    res.render('layout/index');
+    res.render('layout/index', {jsfile:'main'});
 }
 
 module.exports.get_by_category = function(req, res) {
     Request({
         method: 'get',
         url: 'http://localhost:3000/get/post/' + req.params.category
-    }, function(err, resonse, data) {
+    }, function(err, response, data) {
         if(err) {
             console.log(err);
-            res.end();;
+            res.end();
             return;
         }
-        res.render('layout/index');
+        res.render('layout/index', {jsfile:'main'});
     });
 }
 
+module.exports.get_post = function(req, res) {
+    Request({
+        method: 'get',
+        url: 'http://localhost:3000/get/post/' + req.params.category + '/' + req.params.post_name
+    }, function(err, response, data) {
+        if(err) {
+            console.log(err);
+            res.end();
+            return;
+        }
+        res.render('post/detail', {jsfile:'post_detail'});
+    })
+}
+
 module.exports.get_post_detail = function(req, res) {
-    Post.get_post_detail('nodejs-stuff', '1', function(err, data) {
+    Post.get_post_detail(req.params.category, req.params.post_name, function(err, data) {
         if(err) {
             res.end();
         } else{

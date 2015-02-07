@@ -1,10 +1,12 @@
 define(['jquery'], function($) {
-    var detail = function(post_name) {
+    var detail = function() {
+        var category =window.location.href.split('/');
+
+        console.log('/get/post/' + category[category.length-2] + '/' + category[category.length-1]);
         $.ajax({
-            type: 'get',
-            url: '/get/post/:category/' + post_name,
+            url: '/get/post/' + category[category.length-2] + '/' + category[category.length-1],
             success: function(data) {
-                $('#list').after(data);
+                $('#detail').append(data);
             }
         });
     }

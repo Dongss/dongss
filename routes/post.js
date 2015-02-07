@@ -2,10 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Post = require('../controllers/post');
 
-router.get('/demo', function(req, res, next) {
-    Post.demo(req, res);
-});
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
     Post.home(req, res);
@@ -19,6 +15,11 @@ router.get('/category/:category', function(req, res, next) {
 /* GET a post by post_name. */
 router.get('/post/:category/:post_name', function(req, res, next) {
     Post.get_post(req, res)
+});
+
+/* Get detial of post*/
+router.get('/post/:categoty/:post_name', function(req, res, next) {
+    Post.post_detail(req, res);
 });
 
 //#res detail of a post
