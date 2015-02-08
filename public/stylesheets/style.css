@@ -6,7 +6,7 @@ a {
     color: #777;
 }
 a:hover {
-    color: #BA9F58;
+    color: #000;
     text-decoration: none;
 }
 #header {
@@ -47,10 +47,13 @@ a:hover {
 }
 #category a {
     font-size: larger;
-    color: #389AAB;
+    //color: #389AAB;
 }
 .panel-default>.panel-heading {
     color: #F5F2F2;
     background-color: #3F5256;
     font-weight: 900;
+}
+#list a{
+    font-size: 25px;
 }

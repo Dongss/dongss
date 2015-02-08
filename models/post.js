@@ -44,10 +44,11 @@ module.exports.get_by_category = function(category) {
 }
 
 module.exports.get_post_detail = function(category, post_name, callback) {
-    Fs.readFile('../config/posts/' + category + '/' + post_name + '.md', function(err, data) {
+    Fs.readFile('../config/posts/' + category + '/' + post_name + '.md', {encoding: "utf8" },function(err, data) {
         if(err) {
             return callback(true);
         }
-        return callback(null, (Markdown.toHTML(data.toString('utf-8'))))
+        console.log(data);
+;        return callback(null, (Markdown.toHTML(data)))
     });
 }

@@ -9,7 +9,9 @@ define(['jquery'], function($) {
 
                 for(var i in data.data) {
                     var n = data.data.length - i -1;
-                    var html = '<a href="/post/' + data.data[n].category + '/' + data.data[n].name + '">' + data.data[n].title + '</a></br>';
+                    var html = '<a href="/post/' + data.data[n].category + '/' + data.data[n].name + '">' + data.data[n].title + '</a></br>'
+                        + data.data[n].tags + '</br>'
+                        + data.data[n].time + '</br>';
                     $('#list').append(html);
                 }
             }
