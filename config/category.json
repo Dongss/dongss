@@ -2,5 +2,6 @@
   "nodejs-stuff": "nodejs杂货",
   "javascript": "javascript",
   "web": "WEB",
-  "other": "other"
+  "other": "other",
+  "front": "前端"
 }

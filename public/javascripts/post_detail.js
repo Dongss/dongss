@@ -3,7 +3,8 @@ requirejs.config({
     paths: {
         'jquery': 'libs/jquery',
         'category': 'src/category',
-        'detail': 'src/detail'
+        'detail': 'src/detail',
+        'highlight': 'libs/highlight.pack'
     },
     shim: {
         "category": {
@@ -11,7 +12,7 @@ requirejs.config({
             exports: 'category'
         },
         "detail": {
-            deps: ['jquery'],
+            deps: ['jquery', 'highlight'],
             exports: 'detail'
         }
     }
