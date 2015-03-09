@@ -48,6 +48,7 @@ module.exports.get_post_detail = function(category, post_name, callback) {
         if(err) {
             return callback(true);
         }
+        console.log(data);
 ;        return callback(null, (Markdown.toHTML(data)))
     });
 }
